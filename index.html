@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EXIF Viewer BD - Photo Metadata, On Your Device</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <div>
+      <h1>EXIF Viewer BD</h1>
+      <p id="tagline" class="tagline"></p>
+    </div>
+    <button id="langBtn" class="btn ghost" type="button">Bangla</button>
+  </div>
+</header>
+<main class="wrap">
+  <section id="dropzone" class="dropzone" aria-label="Photo drop area">
+    <p id="dropText" class="drop-text"></p>
+    <input id="fileInput" type="file" accept=".jpg,.jpeg,image/jpeg" hidden>
+    <div class="row gap">
+      <button id="chooseBtn" class="btn primary" type="button"></button>
+      <button id="demoBtn" class="btn" type="button"></button>
+      <button id="clearBtn" class="btn ghost" type="button"></button>
+    </div>
+    <p class="hint">JPEG only, up to 50 MB. Files are parsed in your browser and never uploaded.</p>
+  </section>
+
+  <p id="errorBox" class="error" style="display:none" role="alert"></p>
+
+  <section id="emptyState" class="card">
+    <h2 id="emptyTitle"></h2>
+    <p id="emptyText"></p>
+  </section>
+
+  <section id="resultState" style="display:none">
+    <img id="previewImg" class="preview" alt="Selected photo preview" style="display:none">
+    <p id="demoNote" class="note" style="display:none"></p>
+    <div class="grid">
+      <div class="card">
+        <h2 id="fileInfoTitle"></h2>
+        <table><tbody id="fileInfoBody"></tbody></table>
+      </div>
+      <div class="card">
+        <h2 id="exifTitle"></h2>
+        <table><tbody id="exifBody"></tbody></table>
+        <p id="noExifNote" class="note" style="display:none"></p>
+      </div>
+    </div>
+    <div class="card">
+      <h2 id="gpsTitle"></h2>
+      <table><tbody id="gpsBox"></tbody></table>
+      <a id="mapLink" class="maplink" style="display:none" target="_blank" rel="noopener"></a>
+    </div>
+    <div class="card">
+      <h2 id="privacyTitle"></h2>
+      <p id="privacyText"></p>
+      <div class="row gap">
+        <button id="stripBtn" class="btn primary" type="button" disabled></button>
+        <button id="copyBtn" class="btn" type="button" disabled></button>
+      </div>
+      <p id="stripNote" class="note"></p>
+    </div>
+  </section>
+</main>
+<footer class="wrap footer"><p id="footerText"></p></footer>
+<script src="js/logic.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
