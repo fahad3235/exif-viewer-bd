@@ -1,5 +1,5 @@
-// UI strings: EN + BN. Bengali text is converted to \uXXXX escapes by tools/escape-i18n.mjs
-// (kept in source as escapes so the push path stays pure ASCII).
+// UI strings: EN + BN. Bengali text is stored as \uXXXX escapes in this file
+// (so the source stays pure ASCII and survives the push path intact).
 (function (root) {
   'use strict';
   var STR = {
